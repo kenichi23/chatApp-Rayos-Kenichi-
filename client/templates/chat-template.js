@@ -15,17 +15,26 @@ Template.appChat.events({
 		Messages.remove(this._id);
 		return false; 
 	},
-	"keyup .txtText": function (event){
+	"keyup .txtMotto": function (event){
 
 		if (event.keyCode == 13) {
 			Messages.insert({
-				name: $(".txtName").val(),
-				text: $(".txtText").val(),
+				last: $(".txtLast").val(),
+				first: $(".txtFirst").val(),
+				middle: $(".txtMiddle").val(),
+				age: $(".txtAge").val(),
+				cy: $(".txtCY").val(),
+				motto: $(".txtMotto").val(),
 				createdAt: new Date()
 
 			});
-			text: $(".txtText").val("");
-			text: $(".txtText").focus();
+			last: $(".txtLast").val("");
+			first: $(".txtFirst").val("");
+			middle: $(".txtMiddle").val("");
+			age: $(".txtAge").val("");
+			cy: $(".txtCY").val("");
+			motto: $(".txtMotto").val("");
+			last: $(".txtLast").focus();
 		}
 
 		return false;
